@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/general"
+        android:textColor="@color/ColorAccent"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.SwitchCompat
+        android:id="@+id/notification_switch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:checked="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/notifications"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_reset_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/reset_tutorial"
+        android:textSize="18sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/trakt"
+        android:textColor="@color/ColorAccent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_trakt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/login_to_trakt"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_trakt_add_all_shows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/add_trakt_shows"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/backup_restore"
+        android:textColor="@color/ColorAccent"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_backup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/create_backup"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_restore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+        android:text="@string/restore_backup"
+        android:textSize="18sp" />
+
+</LinearLayout>

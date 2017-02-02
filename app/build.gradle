@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    defaultConfig {
+        applicationId "com.chashmeet.singh.trackit"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 14
+        versionName "1.2.8"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'LICENSE.txt'
+    }
+
+    productFlavors {
+        releaseConfig {
+            applicationId "com.chashmeet.singh.trackit"
+            minSdkVersion 16
+            targetSdkVersion 24
+            versionCode 14
+            versionName "1.2.8"
+        }
+        debugConfig {
+            applicationId "com.chashmeet.singh.trackit"
+            minSdkVersion 16
+            targetSdkVersion 24
+            versionCode 404
+            versionName "404.0"
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            zipAlignEnabled true
+            debuggable true
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url 'https://maven.fabric.io/public'
+    }
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    ext {
+        supportLibVersion = '25.1.0'
+    }
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':squareprogressbar')
+
+    // Support Libraries
+    compile "com.android.support:appcompat-v7:${supportLibVersion}"
+    compile "com.android.support:cardview-v7:${supportLibVersion}"
+    compile "com.android.support:recyclerview-v7:${supportLibVersion}"
+    compile "com.android.support:palette-v7:${supportLibVersion}"
+    compile "com.android.support:design:${supportLibVersion}"
+
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.github.TR4Android:AndroidSlidingUpPanel:3.2.1'
+
+    compile 'com.ms-square:expandableTextView:0.1.4'
+
+    compile 'com.github.coyarzun89:fabtransitionactivity:0.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'mbanje.kurt:fabbutton:1.2.2@aar'
+
+    compile 'com.github.deano2390:MaterialShowcaseView:1.1.0'
+    compile 'com.github.arimorty:floatingsearchview:2.0.1'
+    compile 'com.nononsenseapps:filepicker:3.0.0'
+
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+
+    compile 'org.apache.oltu.oauth2:org.apache.oltu.oauth2.client:0.31'
+
+    compile 'joda-time:joda-time:2.9.4'
+}

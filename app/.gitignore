@@ -1,0 +1,6 @@
+/build
+/.idea
+.idea/
+
+app/app.iml
+app/fabric.properties

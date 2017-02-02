@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/watched_all"
+        android:title="@string/set_watched"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/watched_none"
+        android:title="@string/set_unwatched"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/collected_all"
+        android:title="@string/set_collected"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/collected_none"
+        android:title="@string/set_uncollected"
+        app:showAsAction="never" />
+
+</menu>

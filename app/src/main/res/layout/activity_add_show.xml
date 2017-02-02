@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.sothree.slidinguppanel.FloatingActionButtonLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:sothree="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            sothree:umanoFabMode="leave_behind"
+            tools:context=".DemoActivity">
+
+            <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/sliding_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                sothree:umanoDragView="@+id/dragView"
+                sothree:umanoOverlay="true"
+                sothree:umanoPanelHeight="68dp"
+                sothree:umanoShadowHeight="4dp">
+                <!-- MAIN CONTENT -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progress_wheel"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:indeterminate="true"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                    <ImageView
+                        android:id="@+id/poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="30dp"
+                        android:contentDescription="@string/transition_poster"
+                        android:scaleType="fitXY" />
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start|top"
+                        android:contentDescription="@string/NULL"
+                        android:padding="10dp"
+                        android:paddingTop="6dp"
+                        android:src="@drawable/ic_arrow_back" />
+
+                </FrameLayout>
+
+                <!-- SLIDING LAYOUT -->
+                <RelativeLayout
+                    android:id="@+id/dragView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#99212121"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:gravity="start|top"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/myRectangleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:background="@drawable/rectangle_bg" />
+
+                    <com.chashmeet.singh.trackit.misc.AutoResizeTextView
+                        android:id="@+id/tv_show_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="68dp"
+                        android:layout_marginEnd="12dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:layout_marginStart="10dp"
+                        android:ellipsize="none"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+                    <android.support.v4.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/tv_show_name">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/tv_overview_static"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="10dp"
+                                android:padding="5dp"
+                                android:text="@string/overview"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/divider1"
+                                style="@style/Divider"
+                                android:layout_below="@+id/tv_overview_static"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp" />
+
+                            <include
+                                android:id="@+id/tv_overview"
+                                layout="@layout/expandable_textview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/divider1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginTop="3dp" />
+
+                            <TextView
+                                android:id="@+id/tv_year_static"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_overview"
+                                android:layout_centerHorizontal="true"
+                                android:padding="5dp"
+                                android:text="@string/year"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/divider2"
+                                style="@style/Divider"
+                                android:layout_below="@+id/tv_year_static"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp" />
+
+                            <TextView
+                                android:id="@+id/tv_year"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/divider2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="sans-serif-condensed"
+                                android:padding="5dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tv_status_static"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/tv_year"
+                                android:layout_centerHorizontal="true"
+                                android:padding="5dp"
+                                android:text="@string/status"
+                                android:textColor="#FFFFFF"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:id="@+id/divider4"
+                                style="@style/Divider"
+                                android:layout_below="@+id/tv_status_static"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp" />
+
+                            <TextView
+                                android:id="@+id/tv_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/divider4"
+                                android:layout_centerHorizontal="true"
+                                android:fontFamily="sans-serif-condensed"
+                                android:padding="5dp"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp" />
+
+                        </RelativeLayout>
+
+                    </android.support.v4.widget.NestedScrollView>
+
+                </RelativeLayout>
+
+            </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+            <mbanje.kurt.fabbutton.FabButton
+                android:id="@+id/fab_add_show"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:color="@color/ColorAccent"
+                android:src="@drawable/ic_action_add"
+                app:fbb_endBitmap="@drawable/ic_fab_complete"
+                app:fbb_hideProgressOnComplete="true"
+                app:fbb_progressColor="#FFA852"
+                app:fbb_progressWidthRatio="0.1"
+                app:fbb_showEndBitmap="true" />
+
+        </com.sothree.slidinguppanel.FloatingActionButtonLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

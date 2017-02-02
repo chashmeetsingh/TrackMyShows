@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activity.MainActivity">
+
+    <item
+        android:id="@+id/action_trending"
+        android:icon="@drawable/ic_trending"
+        android:orderInCategory="0"
+        android:title="@string/action_trending"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_update"
+        android:orderInCategory="3"
+        android:title="@string/action_update"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="4"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+</menu>

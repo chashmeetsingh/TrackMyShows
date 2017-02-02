@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tap_to_retry"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/iv_retry"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/retry"
+        android:contentDescription="@string/connection_error" />
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_retry"
+        android:gravity="center"
+        android:text="@string/connection_error"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

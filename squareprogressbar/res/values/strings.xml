@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">android-square-progressbar</string>
+    <string name="description">That&amp;apos;s the image to draw the progressbar around.</string>
+    <string name="season_menu">season_menu</string>
+
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ColorWindowBackground"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/tv_time_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/static_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/notify_at"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:textColor="@color/ColorAccent"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time_layout"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_view_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="@string/days"
+                android:textSize="18sp" />
+
+            <NumberPicker
+                android:id="@+id/number_picker_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/text_view_days"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/relative_layout_1"
+            android:layout_toRightOf="@+id/relative_layout_1"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_view_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="@string/hours"
+                android:textSize="18sp" />
+
+            <NumberPicker
+                android:id="@+id/number_picker_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/text_view_hours"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/relative_layout_2"
+            android:layout_toRightOf="@+id/relative_layout_2"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/text_view_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="@string/minutes"
+                android:textSize="18sp" />
+
+            <NumberPicker
+                android:id="@+id/number_picker_minutes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_below="@+id/text_view_minutes"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/spinner_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative_layout"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/button_cancel"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/spinner_time"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignStart="@id/spinner_time"
+        android:layout_below="@id/spinner_time"
+        android:text="@android:string/cancel"
+        android:textColor="@color/ColorAccent"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_ok"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/spinner_time"
+        android:layout_alignRight="@id/spinner_time"
+        android:layout_below="@id/spinner_time"
+        android:text="@android:string/ok"
+        android:textColor="@color/ColorAccent"
+        android:textSize="16sp" />
+
+</RelativeLayout>

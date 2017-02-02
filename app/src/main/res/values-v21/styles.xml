@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AlternateTheme" parent="Theme.AppCompat">
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowBackground">@color/ColorWindowBackground</item>
+    </style>
+
+</resources>

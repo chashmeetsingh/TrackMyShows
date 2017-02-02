@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ColorPrimary">#212121</color>
+    <color name="ColorPrimaryDark">#1a1a1a</color>
+    <color name="ColorTabScroll">#FFFFFF</color>
+    <color name="ColorAccentLight">#FF8A80</color>
+    <color name="ColorAccent">#FF5252</color>
+    <color name="ColorAccentDark">#FF1744</color>
+    <color name="ColorPrimaryText">#212121</color>
+    <color name="ColorSecondaryText">#FFFFFF</color>
+    <color name="ColorTab2Item">#F5F5F5</color>
+    <color name="ColorCardView">#303030</color>
+    <color name="ColorWindowBackground">#212121</color>
+    <color name="ColorDivider">#000000</color>
+    <color name="ColorWatchedGreen">#4CAF50</color>
+    <color name="ColorWatchedRed">#F44336</color>
+    <color name="ColorCollectionButton">#448AFF</color>
+
+    <color name="tutorialBackground">#D9000000</color>
+    <color name="tutorialDismiss">#FF9100</color>
+
+    <color name="green">#009900</color>
+    <color name="red">#F44336</color>
+
+    <!--Light color theme-->
+    <!--<color name="ColorPrimaryAlternate">#F5F5F5</color>
+    <color name="ColorPrimaryDarkAlternate">#BDBDBD</color>
+    <color name="ColorWindowBackgroundAlternate">#000000</color>-->
+    <color name="ColorWindowBackgroundLight">#E0E0E0</color>
+
+</resources>
+

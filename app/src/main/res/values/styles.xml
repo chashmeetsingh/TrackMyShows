@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:windowBackground">@color/ColorWindowBackground</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimaryDark">@color/ColorAccentDark</item>
+        <item name="colorPrimary">#F5F5F5</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:windowBackground">@color/ColorWindowBackgroundLight</item>
+    </style>
+
+    <style name="AlternateTheme" parent="Theme.AppCompat">
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:windowBackground">@color/ColorWindowBackground</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/ColorAccent</item>
+    </style>
+
+    <style name="DividerGrey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/ColorCardView</item>
+    </style>
+
+    <style name="SearchView">
+        <item name="floatingSearch_backgroundColor">#000000</item>
+        <item name="floatingSearch_viewTextColor">@android:color/white</item>
+        <item name="floatingSearch_hintTextColor">@android:color/darker_gray</item>
+        <item name="floatingSearch_dividerColor">@android:color/darker_gray</item>
+        <item name="floatingSearch_clearBtnColor">@android:color/white</item>
+        <item name="floatingSearch_leftActionColor">@android:color/white</item>
+    </style>
+
+    <style name="TitleTextApperance" parent="@android:style/TextAppearance.Large">
+        <item name="android:textColor">@color/ColorAccent</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="FilePickerTheme" parent="NNF_BaseTheme">
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="alertDialogTheme">@style/FilePickerAlertDialogTheme</item>
+    </style>
+
+    <style name="FilePickerAlertDialogTheme" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="colorPrimary">@color/ColorPrimary</item>
+        <item name="colorPrimaryDark">@color/ColorPrimaryDark</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+    </style>
+
+</resources>
