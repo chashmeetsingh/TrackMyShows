@@ -1,4 +1,4 @@
-# TrackIt - Keep a track of your favourite TV Shows
+# TrackMyShows - Keep a track of your favourite TV Shows
 
 ![Imgur](http://i.imgur.com/BgPwbn8.png)
 
